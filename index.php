@@ -1,18 +1,7 @@
 
 <?php
-    $separador = ';';
-    $archivo = 'mostrarData.csv';
-    $datos = []; 
-    if (file_exists($archivo)) {
-        if (($h = fopen("{$archivo}", "r")) !== FALSE) 
-        {
-            while (($data = fgetcsv($h, 1000, $separador)) !== FALSE) 
-            {
-                $datos[] = $data;		
-            }
-            fclose($h);
-        }
-    }
+    include('libreria.php');
+    $datos = leerdata();
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -69,12 +58,12 @@
                         <thead>
                             <tr>
                             <th scope="col">#</th>
-                            <th scope="col">REFERENCIA INTERNA NUEVA</th>
-                            <th scope="col">CODIGO DE BARRA</th>
-                            <th scope="col">REF CRUZADA</th>
-                            <th scope="col">DESCRIPCION CORTA</th>
-                            <th scope="col">PRECIO</th>
-                            <th scope="col">DESCUENTO</th>
+                            <th scope="col">REFERENCIA</th>
+                            <th scope="col">CODIGO 1</th>
+                            <th scope="col">CODIGO 2</th>
+                            <th scope="col">DESCRIPCION</th>
+                            <th scope="col">REF</th>
+                            <th scope="col">DESCONTADO</th>
                             <th scope="col">%</th>
                             </tr>
                         </thead>
