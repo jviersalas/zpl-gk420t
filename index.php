@@ -30,33 +30,38 @@
     <div class='container-fluid my-5  text-center'>
         <div class='row'>
             <div class='col-md-6'>
-            <div class="card border-secondary mb-3" >
-                <div class="card-header">Subir excel</div>
-                    <div class="card-body">
-                        <form method='post' action='control.php?opc=subir'  enctype="multipart/form-data">
-                            <fieldset>             
-                                <fieldset class="form-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="archivo" required name='archivo'>
-                                    <label class="custom-file-label" for="archivo">Seleccionar documento...</label>
-                                    <div class="invalid-feedback">Example invalid custom file feedback</div>
-                                </div>
+                <div class="card border-secondary mb-3" >
+                    <div class="card-header">Subir archivo - upload file CSV</div>
+                        <div class="card-body">
+                            <form method='post' action='control.php?opc=subir'  enctype="multipart/form-data">
+                                <fieldset>             
+                                    <fieldset class="form-group">
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="archivo" required name='archivo'>
+                                            <label class="custom-file-label" for="archivo">Seleccionar documento...</label>
+                                            <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                        </div>
+                                    </fieldset>
+                                    <button type="submit" class="btn btn-primary">Subir - upload  </button>
                                 </fieldset>
-                                <button type="submit" class="btn btn-primary">Subir</button>
-                            </fieldset>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
             <div class='col-md-6'>
-            <form>
-            <fieldset>
-                <legend>Numero</legend>
-                <div class="form-group">
-                <input type="email" class="form-control" id="numero"  name="numero" aria-describedby="emailHelp" placeholder="numero">
-                </div>
-            </form>
-                <button type="button" class="btn btn-primary" id='btn-zpl'>Imprimir ZPL en el listado</button>
+                <div class="card border-secondary mb-3" >
+                    <div class="card-header">Imprimir - to print</div>
+                        <div class="card-body">
+                            <fieldset>
+                                <form>
+                                    <div class="form-group">
+                                    <input type="email" class="form-control" id="numero"  name="numero" aria-describedby="emailHelp" placeholder="numero - number">
+                                    </div>
+                                    <button type="button" class="btn btn-warning" id='btn-zpl'>Imprimir ZPL en el listado</button>
+                                </form>
+                            </fieldset>
+                        </div>
+                    </div>
             </div>
             <div class='col-md-12'>
                 <div class="jumbotron">
