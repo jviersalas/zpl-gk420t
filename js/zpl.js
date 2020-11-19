@@ -7,6 +7,6 @@ $(document).ready(function()
         var parametros = {
             "numero" : num
         };
-        imprimirZPLPedido(parametros);
+        imprimirZPL(parametros);
     });
 });

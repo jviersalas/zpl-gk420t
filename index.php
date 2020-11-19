@@ -1,24 +1,21 @@
 
 <?php
-$separador = ';';
-$archivo = 'mostrarData.csv';
-$datos = []; 
-if (file_exists($archivo)) {
-    if (($h = fopen("{$archivo}", "r")) !== FALSE) 
-    {
-        while (($data = fgetcsv($h, 1000, $separador)) !== FALSE) 
+    $separador = ';';
+    $archivo = 'mostrarData.csv';
+    $datos = []; 
+    if (file_exists($archivo)) {
+        if (($h = fopen("{$archivo}", "r")) !== FALSE) 
         {
-            $datos[] = $data;		
+            while (($data = fgetcsv($h, 1000, $separador)) !== FALSE) 
+            {
+                $datos[] = $data;		
+            }
+            fclose($h);
         }
-        fclose($h);
     }
-}
-
 ?>
 <!DOCTYPE HTML>
-
 <html>
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Impresion de ZPL</title>
