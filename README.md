@@ -1,5 +1,5 @@
 
-![Alt text](label.jpg?raw=true "Label Zebra")
+![Alt text](label.png?raw=true "Label Zebra")
 # zpl-gk420t
 Sistema base de impresión con Zebra gk420t con PHP JS CSV y Zebra browser
 
